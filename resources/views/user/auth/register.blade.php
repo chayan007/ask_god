@@ -1,11 +1,12 @@
-@extends('user.layout.auth')
+@extends('user.layout.user')
+@section('title', 'Register')
 
 @section('content')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
+                <div class="panel-heading" style="font-style: italic; font-size: 30px;">Register</div>
                 <div class="panel-body">
                     <form class="form-horizontal" role="form" method="POST" action="{{ url('/user/register') }}">
                         {{ csrf_field() }}
@@ -68,7 +69,7 @@
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-outline-warning btn-block">
                                     Register
                                 </button>
                             </div>

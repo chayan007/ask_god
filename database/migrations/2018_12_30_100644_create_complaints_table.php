@@ -19,8 +19,6 @@ class CreateComplaintsTable extends Migration
             $table->foreign('user')->references('id')->on('users');
             $table->longText('complaint');
             $table->longText('guidance')->nullable();
-            $table->unsignedInteger('lord')->nullable();
-            $table->foreign('lord')->references('id')->on('lords');
             $table->timestamps();
         });
     }

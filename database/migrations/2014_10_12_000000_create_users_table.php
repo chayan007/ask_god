@@ -19,7 +19,9 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('gender')->nullable();
             $table->date('birth')->nullable();
-            $table->string('image')->nullable();
+            $table->string('face')->nullable();
+            $table->string('palm')->nullable();
+            $table->string('verification')->nullable();
             $table->text('bio')->nullable();
             $table->string('religion')->nullable();
             $table->boolean('is_premium')->default(False);
