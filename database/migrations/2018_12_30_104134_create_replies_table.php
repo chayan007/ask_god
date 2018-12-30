@@ -18,6 +18,10 @@ class CreateRepliesTable extends Migration
             $table->unsignedInteger('message');
             $table->foreign('message')->references('id')->on('messages');
             $table->longText('reply');
+            $table->unsignedInteger('to');
+            $table->foreign('to')->references('id')->on('users');
+            $table->unsignedInteger('from');
+            $table->foreign('from')->references('id')->on('users');
             $table->timestamps();
         });
     }

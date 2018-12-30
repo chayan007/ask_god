@@ -5,9 +5,11 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
-class Message extends Model
+class Reply extends Model
 {
     use Notifiable;
 
-    protected $fillable= ['id', 'to', 'from', 'message', 'is_anonymous', 'is_reported'];
+    protected $fillable = ['to', 'from', 'message', 'reply'];
+
+    protected $table='replys';
 }

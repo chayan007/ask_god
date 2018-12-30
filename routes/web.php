@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('user.home');
 });
 
+Route::get('/people/{username}', 'MessageController@getProfile');
+
 Route::group(['prefix' => 'user'], function () {
   Route::get('/login', 'UserAuth\LoginController@showLoginForm')->name('login');
   Route::post('/login', 'UserAuth\LoginController@login');

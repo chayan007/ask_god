@@ -47,8 +47,8 @@
                     </li>
                     <li class="dropdown"><a href="#">Messages <i class="fa fa-angle-down"></i></a>
                         <ul role="menu" class="sub-menu">
-                            <li><a href="/user/sendMessage">Send a Message</a></li>
-                            <li><a href="/user/getMessages">Check Inbox</a></li>
+                            <li><a href="/user/getInboxMessages">Check Inbox</a></li>
+                            <li><a href="/user/getOutboxMessages">Check Outbox</a></li>
                             <li><a href="/people/username">Share Link</a></li>
                         </ul>
                     </li>                    <li class="active"><a href="/user/gods">Check Gods</a></li>

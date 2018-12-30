@@ -13,11 +13,11 @@
                         <a href="/user/login" class="btn btn-common">SIGN IN</a>
 
                     </div>
-                    <img src="images/home/slider/hill.png" class="slider-hill" alt="slider image">
-                    <img src="images/home/slider/house.png" class="slider-house" alt="slider image">
-                    <img src="images/home/slider/sun.png" class="slider-sun" alt="slider image">
-                    <img src="images/home/slider/birds1.png" class="slider-birds1" alt="slider image">
-                    <img src="images/home/slider/birds2.png" class="slider-birds2" alt="slider image">
+                    <img src="{{ asset('images/home/slider/hill.png') }}" class="slider-hill" alt="slider image">
+                    <img src="{{ asset('images/home/slider/house.png') }}" class="slider-house" alt="slider image">
+                    <img src="{{ asset('images/home/slider/sun.png') }}" class="slider-sun" alt="slider image">
+                    <img src="{{ asset('images/home/slider/birds1.png') }}" class="slider-birds1" alt="slider image">
+                    <img src="{{ asset('images/home/slider/birds2.png') }}" class="slider-birds2" alt="slider image">
                 </div>
             </div>
         </div>
@@ -123,7 +123,7 @@
                     <div class="clients text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
                         <p><img src="{{ asset('images/home/clients.png') }}" class="img-responsive" alt=""></p>
                         <h1 class="title">Happy Users</h1>
-                        <p>We are happy to have 10K+ patient users communicating with God and Satan everyday. <br> It is free to communicate with God because it is basic human right. <br> Patience is the ultimate key to use this site. <br> You will recieve answers when Gods or Satan feels it. They work in mysterious ways.</p>
+                        <p>We are happy to have 10K+ patient users communicating with God and Satan everyday. <br> It is free to communicate with God because it is basic spiritual right. <br> Patience is the ultimate key to use this site. <br> You will recieve answers when Gods or Satan feels it. They work in mysterious ways.</p>
                     </div>
                 </div>
             </div>
