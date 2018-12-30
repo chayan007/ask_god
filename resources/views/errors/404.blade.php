@@ -1,67 +1,58 @@
-<form class="form-horizontal" role="form" method="POST" action="{{ url('/user/register') }}">
-    {{ csrf_field() }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>404 Error | Triangle</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
 
-    <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-        <label for="name" class="col-md-4 control-label">Name</label>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
 
-        <div class="col-md-6">
-            <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" autofocus>
-
-            @if ($errors->has('name'))
-                <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
-                                    </span>
-            @endif
+<body>
+<section id="error-page">
+    <div class="error-page-inner">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="text-center">
+                        <div class="bg-404">
+                            <div class="error-image">
+                                <img class="img-responsive" src="{{ asset('images/404.png') }}" alt="">
+                            </div>
+                        </div>
+                        <h2>PAGE NOT FOUND</h2>
+                        <p>The page you are looking for might have been removed, had its name changed.</p>
+                        <a href="index.html" class="btn btn-error">RETURN TO THE HOMEPAGE</a>
+                        <div class="social-link">
+                            <span><a href="#"><i class="fa fa-facebook"></i></a></span>
+                            <span><a href="#"><i class="fa fa-twitter"></i></a></span>
+                            <span><a href="#"><i class="fa fa-google-plus"></i></a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+</section>
 
-    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-        <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
-        <div class="col-md-6">
-            <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
-
-            @if ($errors->has('email'))
-                <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-            @endif
-        </div>
-    </div>
-
-    <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-        <label for="password" class="col-md-4 control-label">Password</label>
-
-        <div class="col-md-6">
-            <input id="password" type="password" class="form-control" name="password">
-
-            @if ($errors->has('password'))
-                <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-            @endif
-        </div>
-    </div>
-
-    <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-        <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
-
-        <div class="col-md-6">
-            <input id="password-confirm" type="password" class="form-control" name="password_confirmation">
-
-            @if ($errors->has('password_confirmation'))
-                <span class="help-block">
-                                        <strong>{{ $errors->first('password_confirmation') }}</strong>
-                                    </span>
-            @endif
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="col-md-6 col-md-offset-4">
-            <button type="submit" class="btn btn-primary">
-                Register
-            </button>
-        </div>
-    </div>
-</form>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/wow.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

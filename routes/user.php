@@ -10,3 +10,5 @@ Route::get('/home', function () {
     return view('user.home');
 })->name('home');
 
+Route::view('/profile', 'user.profile');
+Route::get('/share', 'MessageController@getShareLink');

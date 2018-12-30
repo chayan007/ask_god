@@ -18,7 +18,8 @@ class CreateLordsTable extends Migration
             $table->string('name');
             $table->string('image');
             $table->text('description')->nullable();
-            $table->string('origin')->nullable();
+            $table->string('category')->nullable();
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }

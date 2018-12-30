@@ -1,4 +1,4 @@
-@extends('user.layout.auth')
+@extends('user.layout.user')
 
 <!-- Main Content -->
 @section('content')

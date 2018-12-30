@@ -21,6 +21,7 @@ class CreateQuestionsTable extends Migration
             $table->longText('answer')->nullable();
             $table->unsignedInteger('lord');
             $table->foreign('lord')->references('id')->on('lords');
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }

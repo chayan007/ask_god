@@ -19,6 +19,7 @@ class CreateComplaintsTable extends Migration
             $table->foreign('user')->references('id')->on('users');
             $table->longText('complaint');
             $table->longText('guidance')->nullable();
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }
