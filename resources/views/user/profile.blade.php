@@ -12,19 +12,23 @@
                     <strong>{{ session('error') }}</strong>
                 </div>
             @endif
-            <div class="panel panel-warning" align="center">
+            <div class="panel panel-warning" align="center" style="margin: 10px;">
                 <div class="panel-heading" style="font-family: 'Britannic Bold'; font-style: italic; font-weight: bolder;">{{ $user->name }}</div>
                 <div class="panel-body">
                     <form action="/user/profile" method="POST" enctype="multipart/form-data">
                         @csrf
-                        <img src="@if($user->image != NULL ) {{ $user->image }} @else {{ asset('images/robot.png') }} @endif" class="img-circle" alt="Display Pic" height="200px" width="300px">
-                        <div class="form-group">
+                        @if($user->face != NULL )
+                            <img src="{{ $user->face }}" class="img-circle" alt="Display Pic" height="200px" width="300px">
+                        @else
+                            <img src="{{ asset('images/robot.png') }}" class="img-circle" alt="Display Pic" height="200px" width="300px">
+                        @endif
+                            <div class="form-group">
                             <input type="file" class="form-control-file" name="face" aria-describedby="fileHelpId" style="margin: 10px">
                             <p class="form-text text-muted">
                                 Image must show your proper face for accurate astrology results.
                             </p>
                         </div>
-                        <img src="@if($user->image != NULL ) {{ $user->palm }} @else {{ asset('images/hand.jpg') }} @endif" class="img-circle" alt="Display Pic" height="200px" width="300px">
+                        <img src="@if($user->palm != NULL ) {{ $user->palm }} @else {{ asset('images/hand.jpg') }} @endif" class="img-circle" alt="Display Pic" height="200px" width="300px">
                         <div class="form-group">
                             <input type="file" class="form-control-file" name="palm" aria-describedby="fileHelpId" style="margin: 10px">
                             <p class="form-text text-muted">
@@ -50,13 +54,13 @@
                             </p>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="password1" id="" style="text-align: center; outline: 1px solid deepskyblue;" aria-describedby="helpId" placeholder="">
+                            <input type="text" class="form-control" name="password1" id="" style="text-align: center; outline: 1px solid deepskyblue;" aria-describedby="helpId" placeholder="* * * * * *">
                             <p class="form-text text-muted">
                                 Enter the new password once.
                             </p>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="password2" id="" style="text-align: center; outline: 1px solid deepskyblue;" aria-describedby="helpId" placeholder="">
+                            <input type="text" class="form-control" name="password2" id="" style="text-align: center; outline: 1px solid deepskyblue;" aria-describedby="helpId" placeholder="* * * * * *">
                             <p class="form-text text-muted">
                                 Enter the new password again.
                             </p>
@@ -68,11 +72,14 @@
                                 <option>Others</option>
                             </select>
                             <p class="form-text text-muted">
-                                The gender shows innumerable ways of future possibilities.
+                                Your current gender is @if($user->gender != NULL) {{ $user->gender }} @else Others @endif. Gender is very important for horoscopic calculations.
                             </p>
                         </div>
                         <div class="form-group">
                             <textarea class="form-control" name="bio" style="text-align: center; outline: 1px solid deepskyblue;" value="{{ $user->bio }}" rows="4"></textarea>
+                            <p class="form-text text-muted">
+                                Enter a short and spicy bio so that the Devil can have a look at you.
+                            </p>
                         </div>
                         <div class="form-group">
                             <input type="text" class="form-control" name="religion" style="text-align: center; outline: 1px solid deepskyblue;" aria-describedby="helpId"

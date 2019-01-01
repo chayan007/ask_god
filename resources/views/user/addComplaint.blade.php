@@ -1,8 +1,8 @@
 @extends('user.layout.user')
-@section('title', 'Add Complaint')
+@section('title', 'Post a Complaint')
     @section('content')
         @if(session('status'))
-            <div class="alert alert-success" role="alert">
+            <div class="alert alert-success" role="alert" align="center">
                 <strong>{{ session('status') }}</strong>
             </div>
         @endif
@@ -15,7 +15,7 @@
                             {{ csrf_field() }}
 
                             <div class="form-group" align="center">
-                                <textarea class="form-control" name="complaint" id="complaint" rows="3" style="outline: 2px solid deepskyblue; margin: 5px; padding: 10px"></textarea>
+                                <textarea class="form-control" name="complaint" id="complaint" rows="3" style="outline: 2px solid deepskyblue; margin: 5px; padding: 10px" placeholder="Try to be as descriptive you can.."></textarea>
                                 <p class="form-text text-muted" style="padding: 5px">
                                     Make sure you describe your problem properly. Gods want to empathize your problem before giving you guidance. Other users may also give you guidance on it.
                                 </p>

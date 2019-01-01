@@ -20,6 +20,7 @@ class CreateComplaintsTable extends Migration
             $table->longText('complaint');
             $table->longText('guidance')->nullable();
             $table->string('slug')->unique();
+            $table->integer('report')->default(0);
             $table->timestamps();
         });
     }

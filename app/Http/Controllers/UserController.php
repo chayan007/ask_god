@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Hashing\BcryptHasher;
 
 class UserController extends Controller
 {
@@ -17,6 +18,7 @@ class UserController extends Controller
     public function edit(Request $request)
     {
         $user = User::where('id', Auth::user()->id)->firstOrFail();
+        //dd($request);
         $user->name = $request->name;
         $user->bio = $request->bio;
         if ($request->password1 != NULL & $request->password2 != NULL)
@@ -44,14 +46,15 @@ class UserController extends Controller
         {
             $file = $request->palm;
             $path = $file->store('/public/palm');
-            $user->face = $path;
+            $user->palm = $path;
         }
         if ($request->hasFile('verification'))
         {
             $file = $request->verification;
             $path = $file->store('/public/verification');
-            $user->face = $path;
+            $user->verification = $path;
         }
-        return view('user.profile')->with('success', 'Details has been updated.');
+        $user->save();
+        return view('user.profile')->with('success', 'Details has been updated.')->with('user', $user);
     }
 }
