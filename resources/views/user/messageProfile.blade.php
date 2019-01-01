@@ -11,7 +11,7 @@
                     @csrf
                     <div class="form-group">
                         <label for="">Message</label>
-                        <textarea class="form-control" name="message" rows="4" style="outline: 1px solid blue;"></textarea>
+                        <textarea class="form-control" name="message" rows="4" style="outline: 1px solid blue;" placeholder=" &quot;In this world you can be anything, chose to be the King and do whatever the hell you want.&quot; - Ivar the Boneless "></textarea>
                     </div>
                     <label class="checkbox-inline" style="">
                         <input type="radio" name="is_anonymous" value="1">Anonymous

@@ -24,14 +24,14 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="/">
                     <h1><img src="{{ asset('images/logo.png') }}" alt="logo"></h1>
                 </a>
 
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="active"><a href="/">Home</a></li>
                     @auth
                     <li class="dropdown"><a href="#">Guidance<i class="fa fa-angle-down"></i></a>
                         <ul role="menu" class="sub-menu">
@@ -50,7 +50,7 @@
                         <ul role="menu" class="sub-menu">
                             <li><a href="/user/getInboxMessages">Check Inbox</a></li>
                             <li><a href="/user/getOutboxMessages">Check Outbox</a></li>
-                            <li><a href="/people/username">Share Link</a></li>
+                            <li><a href="/people/{{ Auth::user()->username }}">Share Link</a></li>
                         </ul>
                     </li>
                     <li class="dropdown"><a href="#">Profile <i class="fa fa-angle-down"></i></a>

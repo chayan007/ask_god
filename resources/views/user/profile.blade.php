@@ -1,7 +1,17 @@
 @extends('user.layout.user')
 @section('title','Profile')
     @section('content')
-        <div class="container">
+            @if(session('success'))
+                <div class="container">
+                    <div class="alert alert-success" role="alert">
+                        <strong>{{ session('success') }}</strong>
+                    </div>
+            @endif
+            @if(session('error'))
+                <div class="alert alert-danger" role="alert">
+                    <strong>{{ session('error') }}</strong>
+                </div>
+            @endif
             <div class="panel panel-warning" align="center">
                 <div class="panel-heading" style="font-family: 'Britannic Bold'; font-style: italic; font-weight: bolder;">{{ $user->name }}</div>
                 <div class="panel-body">
@@ -34,19 +44,19 @@
                             </p>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="name" style="text-align: center; outline: 1px solid deepskyblue;" value="{{ $user->email }}" aria-describedby="helpId" placeholder="Enter your email.." readonly="true">
+                            <input type="text" class="form-control" name="email" style="text-align: center; outline: 1px solid deepskyblue;" value="{{ $user->email }}" aria-describedby="helpId" placeholder="Enter your email.." readonly="true">
                             <p class="form-text text-muted">
                                 Sorry ! You cannot change this field.
                             </p>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="" id="" style="text-align: center; outline: 1px solid deepskyblue;" aria-describedby="helpId" placeholder="">
+                            <input type="text" class="form-control" name="password1" id="" style="text-align: center; outline: 1px solid deepskyblue;" aria-describedby="helpId" placeholder="">
                             <p class="form-text text-muted">
                                 Enter the new password once.
                             </p>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="" id="" style="text-align: center; outline: 1px solid deepskyblue;" aria-describedby="helpId" placeholder="">
+                            <input type="text" class="form-control" name="password2" id="" style="text-align: center; outline: 1px solid deepskyblue;" aria-describedby="helpId" placeholder="">
                             <p class="form-text text-muted">
                                 Enter the new password again.
                             </p>

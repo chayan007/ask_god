@@ -1,6 +1,11 @@
 @extends('user.layout.user')
 @section('title', 'Inbox')
     @section('content')
+        @if(count($messages) < 1)
+            <div class="alert alert-warning" role="alert" align="center" style="margin: 10px">
+                <strong>No one has left you a message yet !</strong>
+            </div>
+        @endif    
         @foreach($messages as $message)
             <div class="panel panel-primary" style="margin: 15px;">
                 <div class="panel-heading">{{ DB::table('users')->where('id', $message->from)->first()->name }}</div>
