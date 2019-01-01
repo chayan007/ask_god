@@ -1,27 +1,35 @@
 @extends('user.layout.user')
-@section('title', 'Inbox')
+@section('title', 'Outbox')
 @section('content')
     @foreach($messages as $message)
-        <div class="panel panel-default">
+        <div class="panel panel-primary" style="margin: 15px;">
             <div class="panel-heading">{{ DB::table('users')->where('id', $message->from)->first()->name }}</div>
             <div class="panel-body">
-                <p>{{ $message->message }}</p>
+                <blockquote class="blockquote">
+                    <p class="mb-0">{{ $message->message }}</p>
+                    <footer class="blockquote-footer"> <cite title="Source Title">
+                            @if($message->is_anonymous)
+                                Anonymous
+                            @else
+                                {{ DB::table('users')->where('id', $message->from)->first()->name }}
+                            @endif
+                        </cite></footer>
+                </blockquote>
             </div>
             <ul class="list-group">
-                @php $replys = $replies->where('message', $message->id)->get() @endphp
-                @foreach($replys as $reply)
-                    <li class="list-group-item">{{ $reply->reply }}</li>
-                @endforeach
-                <li class="list-group-item">
-                    <form action="/user/addReply/{{ $message->id }}" method="post">
-                        @csrf
-                        <div class="form-group">
-                            <label for="reply">Reply to this Message</label>
-                            <input type="text" class="form-control" name="reply" id="reply" aria-describedby="helpId" placeholder="Type here...">
-                        </div>
-                        <button type="submit" class="btn btn-common btn-block">Submit</button>
-                    </form>
-                </li>
+                @if(count($replies) > 0)
+                    @php $replys = $replies->where('message', $message->id)->get() @endphp
+                    @if(count($replys) > 0)
+                        @foreach($replys as $reply)
+                            <li class="list-group-item" style="padding-left: 40px;">
+                                <blockquote class="blockquote">
+                                    <p class="mb-0">{{ $reply->reply }}</p>
+                                    <footer class="blockquote-footer"> <cite title="Source Title">{{ Auth::user()->name }}</cite></footer>
+                                </blockquote>
+                            </li>
+                        @endforeach
+                    @endif
+                @endif
             </ul>
         </div>
     @endforeach

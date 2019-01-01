@@ -33,14 +33,14 @@ class MessageController extends Controller
     {
         $user = Auth::user()->id;
         $messages = Message::where('to', $user)->get();
-        $replies = Reply::where('from', $user)->get();
+        $replies = Reply::where('from', $user);
         return view('user.inbox', ['messages' => $messages, 'replies' => $replies]);
     }
 
     public function getOutboxMessages()
     {
         $messages = Message::where('from', Auth::user()->id)->get();
-        $replies = Reply::where('to', Auth::user()->id)->get();
+        $replies = Reply::where('to', Auth::user()->id);
         return view('user.outbox', ['messages' => $messages, 'replies' => $replies]);
     }
 
@@ -53,7 +53,7 @@ class MessageController extends Controller
         $reply->reply = $request->reply;
         $reply->from = Auth::user()->id;
         $reply->save();
-        return redirect()->action('MessageController@getMessages');
+        return redirect()->action('MessageController@getInboxMessages');
     }
 
     public function getProfile($username)

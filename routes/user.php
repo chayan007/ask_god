@@ -14,3 +14,6 @@ Route::post('/addReply/{messageID}', 'MessageController@addReply');
 Route::get('/getInboxMessages', 'MessageController@getInboxMessages');
 Route::get('/getOutboxMessages', 'MessageController@getOutboxMessages');
 Route::get('/addComplaint', 'ComplaintController@addComplaint');
+Route::post('/addComplaint', 'ComplaintController@addComplaint');
+Route::get('/addComplaint', 'ComplaintController@showComplaintForm');
+Route::get('/profile', 'UserController@profile');

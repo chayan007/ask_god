@@ -42,7 +42,8 @@
                     <li class="dropdown"><a href="#">Complaints <i class="fa fa-angle-down"></i></a>
                         <ul role="menu" class="sub-menu">
                             <li><a href="/user/addComplaint">Post a Complaint</a></li>
-                            <li><a href="/user/complaints">See Complaints</a></li>
+                            <li><a href="/user/myComplaints">My Complaints</a></li>
+                            <li><a href="/user/complaints">All Complaints</a></li>
                         </ul>
                     </li>
                     <li class="dropdown"><a href="#">Messages <i class="fa fa-angle-down"></i></a>
@@ -51,7 +52,14 @@
                             <li><a href="/user/getOutboxMessages">Check Outbox</a></li>
                             <li><a href="/people/username">Share Link</a></li>
                         </ul>
-                    </li>                    <li class="active"><a href="/user/gods">Check Gods</a></li>
+                    </li>
+                    <li class="dropdown"><a href="#">Profile <i class="fa fa-angle-down"></i></a>
+                        <ul role="menu" class="sub-menu">
+                            <li><a href="/user/profile">Edit Profile</a></li>
+                            <li><a href="/user/logout">Logout</a></li>
+                        </ul>
+                    </li>
+                    <li class=""><a href="/user/gods">Supernaturals</a></li>
                     @endauth
                     @guest
                     <li><a href="/user/login">Sign In</a></li>
