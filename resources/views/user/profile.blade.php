@@ -18,7 +18,7 @@
                     <form action="/user/profile" method="POST" enctype="multipart/form-data">
                         @csrf
                         @if($user->face != NULL )
-                            <img src="{{ $user->face }}" class="img-circle" alt="Display Pic" height="200px" width="300px">
+                            <img src="{{ Storage::url($user->face) }}" class="img-circle" alt="Display Pic" height="200px" width="300px">
                         @else
                             <img src="{{ asset('images/robot.png') }}" class="img-circle" alt="Display Pic" height="200px" width="300px">
                         @endif
@@ -28,7 +28,7 @@
                                 Image must show your proper face for accurate astrology results.
                             </p>
                         </div>
-                        <img src="@if($user->palm != NULL ) {{ $user->palm }} @else {{ asset('images/hand.jpg') }} @endif" class="img-circle" alt="Display Pic" height="200px" width="300px">
+                        <img src="@if($user->palm != NULL ) {{ Storage::url($user->palm) }} @else {{ asset('images/hand.jpg') }} @endif" class="img-circle" alt="Display Pic" height="200px" width="300px">
                         <div class="form-group">
                             <input type="file" class="form-control-file" name="palm" aria-describedby="fileHelpId" style="margin: 10px">
                             <p class="form-text text-muted">

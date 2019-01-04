@@ -20,7 +20,10 @@ class UserController extends Controller
         $user = User::where('id', Auth::user()->id)->firstOrFail();
         //dd($request);
         $user->name = $request->name;
-        $user->bio = $request->bio;
+        if($request->has('bio'))
+        {
+            $user->bio = $request->bio;
+        }
         if ($request->password1 != NULL & $request->password2 != NULL)
         {
             if ($request->password1 == $request->password2)
