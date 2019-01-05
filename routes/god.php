@@ -10,3 +10,10 @@ Route::get('/home', function () {
     return view('god.home');
 })->name('home');
 
+Route::get('/dashboard', 'GodController@dashboard');
+Route::post('/addLord', 'LordController@addLord');
+Route::get('/addLord', 'LordController@showForm');
+Route::get('/lords', 'LordController@showLords');
+Route::get('/deleteLord/{id}', 'LordController@deleteLord');
+
+

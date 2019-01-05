@@ -34,7 +34,7 @@ Route::group(['prefix' => 'user'], function () {
 Route::group(['prefix' => 'god'], function () {
   Route::get('/login', 'GodAuth\LoginController@showLoginForm')->name('login');
   Route::post('/login', 'GodAuth\LoginController@login');
-  Route::post('/logout', 'GodAuth\LoginController@logout')->name('logout');
+  Route::get('/logout', 'GodAuth\LoginController@logout')->name('logout');
 
   Route::get('/register', 'GodAuth\RegisterController@showRegistrationForm')->name('register');
   Route::post('/register', 'GodAuth\RegisterController@register');

@@ -68,14 +68,6 @@
                     @endguest
                 </ul>
             </div>
-            <div class="search">
-                <form role="form">
-                    <i class="fa fa-search"></i>
-                    <div class="field-toggle">
-                        <input type="text" class="search-form" autocomplete="off" placeholder="Search">
-                    </div>
-                </form>
-            </div>
         </div>
     </div>
 </header>

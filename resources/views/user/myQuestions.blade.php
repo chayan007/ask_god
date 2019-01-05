@@ -6,7 +6,7 @@
                 <strong>You haven't yet asked any Questions yet.</strong>
             </div>
         @else
-            <div class="panel panel-warning" align="center">
+            <div class="panel panel-warning" align="center" style="margin: 10px">
                 <div class="panel-heading">Chayan Datta</div>
                 <div class="panel-body">Question is this ??</div>
                 <div class="panel-footer">
