@@ -14,7 +14,11 @@ class QuestionController extends Controller
         return view('user.addQuestion');
     }
 
-
+    public function myQuestions()
+    {
+        $questions = Question::where('user', Auth::user()->id)->get();
+        return view('user.myQuestions', ['questions' => $questions]);
+    }
     public function addQuestion(Request $request)
     {
         $question = new Question();

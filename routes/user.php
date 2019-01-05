@@ -24,3 +24,4 @@ Route::get('/complaint/{slug}', 'ComplaintController@getComplaint');
 Route::post('/addComment/{id}', 'CommentController@addComment');
 Route::get('/ask', 'QuestionController@showForm');
 Route::post('/addQuestion', 'QuestionController@addQuestion');
+Route::get('/answers', 'QuestionController@myQuestions');
