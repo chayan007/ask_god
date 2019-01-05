@@ -6,7 +6,7 @@
                 <h3 class="panel-title" align="center">{{ $user->name }}</h3>
             </div>
             <div class="panel-body" align="center">
-                <img src="@if($user->image) {{ $user->image }} @else {{ asset('images/admin.png') }}@endif" class="img-thumbnail" alt="" height="200px" width="200px">
+                <img src="@if($user->face) {{ Storage::url($user->face) }} @else {{ asset('images/admin.png') }}@endif" class="img-thumbnail" alt="" height="200px" width="200px">
                 <form action="/user/sendMessage/{{ $user->username }}" method="post">
                     @csrf
                     <div class="form-group">

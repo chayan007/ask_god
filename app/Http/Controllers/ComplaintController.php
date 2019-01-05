@@ -20,7 +20,7 @@ class ComplaintController extends Controller
         $complaint = new Complaint();
         $complaint->complaint = $request->complaint;
         $complaint->user = Auth::user()->id;
-        $complaint->slug = str_slug(substr($complaint->complaint, 0, 20),'_');
+        $complaint->slug = str_slug(substr($complaint->complaint, 0, 10),'_');
         $complaint->save();
         return back()->with('status', 'Complaint has been lodged for justice !');
     }

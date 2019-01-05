@@ -19,9 +19,9 @@
         </div>
         <div class="list-group" style="margin: 10px;">
             @foreach($comments as $comment)
-                <a href="#" class="list-group-item">
-                    <h4 class="list-group-item-heading">{{ DB::table('users')->where('id', $comment->user)->first()->name }}</h4>
-                    <p class="list-group-item-text">{{ $comment->$comment }}</p>
+                <a href="/people/{{ DB::table('users')->where('id', $comment->user)->first()->username }}" class="list-group-item">
+                    <h4 class="list-group-item-heading"><b>{{ DB::table('users')->where('id', $comment->user)->first()->name }}</b> has commented: </h4>
+                    <p class="list-group-item-text" style="padding: 10px; font-family: 'Bodoni MT Black';">{{ $comment->comment }}</p>
                 </a>
             @endforeach
                 <a href="#" class="list-group-item">
