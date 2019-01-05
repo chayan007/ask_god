@@ -29,7 +29,6 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Questions</a>
                     <ul class="sub-menu children dropdown-menu">
                         <li><i class="menu-icon fa fa-fort-awesome"></i><a href="/god/questions">Questions</a></li>
-                        <li><i class="fa fa-exclamation-triangle"></i><a href="/god/answer">Answer Questions</a></li>
                     </ul>
                 </li>
                 <h3 class="menu-title">Complaints</h3><!-- /.menu-title -->
@@ -38,6 +37,14 @@
                     <ul class="sub-menu children dropdown-menu">
                         <li><i class="menu-icon fa fa-balance-scale"></i><a href="/god/complaints">Guide</a></li>
                         <li><i class="menu-icon fa fa-exclamation-triangle"></i><a href="/god/addComplaint">Add Complaint</a></li>
+                    </ul>
+                </li>
+                <h3 class="menu-title">Messages</h3><!-- /.menu-title -->
+
+                <li class="menu-item-has-children dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Messages</a>
+                    <ul class="sub-menu children dropdown-menu">
+                        <li><i class="menu-icon fa fa-fort-awesome"></i><a href="/god/messages">Check</a></li>
                     </ul>
                 </li>
                 <li class="active">

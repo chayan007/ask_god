@@ -61,4 +61,14 @@ class MessageController extends Controller
         $user = User::where('username', $username)->firstOrFail();
         return view('user.messageProfile', ['user' => $user]);
     }
+
+    public function getAllMessages()
+    {
+        $messages = Message::paginate(20);
+        $replies = Reply::all();
+        return view('god.messages', [
+            'messages' => $messages,
+            'replies' => $replies,
+        ]);
+    }
 }

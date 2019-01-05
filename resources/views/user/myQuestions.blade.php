@@ -6,15 +6,17 @@
                 <strong>You haven't yet asked any Questions yet.</strong>
             </div>
         @else
-            <div class="panel panel-warning" align="center" style="margin: 10px">
-                <div class="panel-heading">Chayan Datta</div>
-                <div class="panel-body">Question is this ??</div>
-                <div class="panel-footer">
-                    <blockquote class="blockquote">
-                        <p class="mb-0">Ok this is answer</p>
-                        <footer class="blockquote-footer"> <cite title="Source Title">Minx</cite></footer>
-                    </blockquote>
+            @foreach($questions as $question)
+                <div class="panel panel-warning" align="center" style="margin: 10px">
+                    <div class="panel-heading">{{ Auth::user()->name }}</div>
+                    <div class="panel-body">{{ $question->question }}</div>
+                    <div class="panel-footer">
+                        <blockquote class="blockquote">
+                            <p class="mb-0">{{ $question->answer }}</p>
+                            <footer class="blockquote-footer"> <cite title="Source Title">{{ \Illuminate\Support\Facades\DB::table('lords')->where('id', $question->lord)->first()->name }}</cite></footer>
+                        </blockquote>
+                    </div>
                 </div>
-            </div>
+            @endforeach
         @endif
     @endsection

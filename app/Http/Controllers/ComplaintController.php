@@ -60,4 +60,14 @@ class ComplaintController extends Controller
             'comments' => $comments,
             ]);
     }
+
+    public function getAllComplaints()
+    {
+        $complaints = Complaint::paginate(20);
+        $comments = Comment::all();
+        return view ('god.complaint', [
+            'complaints' => $complaints,
+            'comments' => $comments,
+        ]);
+    }
 }
