@@ -27,7 +27,7 @@ class ComplaintController extends Controller
 
     public function myComplaints()
     {
-        $complaints = Complaint::where('user', Auth::user()->id)->get();
+        $complaints = Complaint::where('user', Auth::user()->id)->orderBy('created_at')->simplePaginate(10);
         $comments = Comment::all();
         return view('user.myComplaints', [
             'complaints' => $complaints,
