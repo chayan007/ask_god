@@ -20,3 +20,5 @@ Route::get('/myComplaints', 'ComplaintController@myComplaints');
 Route::get('/complaints', 'ComplaintController@seeComplaints');
 Route::post('/profile', 'UserController@edit');
 Route::get('/profile', 'UserController@profile');
+Route::get('/complaint/{slug}', 'ComplaintController@getComplaint');
+Route::post('/addComment/{id}', 'CommentController@addComment');

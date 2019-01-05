@@ -29,11 +29,9 @@ class ComplaintController extends Controller
     {
         $complaints = Complaint::where('user', Auth::user()->id)->get();
         $comments = Comment::all();
-        $replies = Reply::all();
         return view('user.myComplaints', [
             'complaints' => $complaints,
             'comments' => $comments,
-            'replies' => $replies,
         ]);
     }
 
@@ -41,11 +39,9 @@ class ComplaintController extends Controller
     {
         $complaints = Complaint::all()->orderBy('created_at')->simplePaginate(10);
         $comments = Comment::all();
-        $replies = Reply::all();
         return view('user.myComplaints', [
             'complaints' => $complaints,
             'comments' => $comments,
-            'replies' => $replies,
         ]);
     }
 
@@ -53,5 +49,15 @@ class ComplaintController extends Controller
     {
         $complaints = Complaint::latest()->paginate(10);
         return view('user.complaints',['complaints' => $complaints]);
+    }
+
+    public function getComplaint($slug)
+    {
+        $complaint = Complaint::where('slug', $slug)->firstOrFail();
+        $comments = Comment::where('complaint', $complaint->id)->get();
+        return view ('user.complaint', [
+            'complaint' => $complaint,
+            'comments' => $comments,
+            ]);
     }
 }

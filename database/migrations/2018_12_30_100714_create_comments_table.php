@@ -20,7 +20,7 @@ class CreateCommentsTable extends Migration
             $table->unsignedInteger('user');
             $table->foreign('user')->references('id')->on('users');
             $table->text('comment');
-            $table->unsignedInteger('hook');
+            $table->unsignedInteger('hook')->nullable();
             $table->foreign('hook')->references('id')->on('comments');
             $table->timestamps();
         });

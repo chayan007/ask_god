@@ -8,18 +8,20 @@ use Illuminate\Support\Facades\Auth;
 
 class CommentController extends Controller
 {
-    public function addComment(Request $request)
+    public function addComment(Request $request, $id)
     {
         $comment = new Comment();
+        $comment->complaint = $id;
         $comment->comment = $request->comment;
         $comment->user = Auth::user()->id;
         $comment->save();
         return back()->with('status','You have commented successfully');
     }
 
-    public function addReply(Request $request, $commentId)
+    public function addReply(Request $request, $commentId, $id)
     {
         $comment = new Comment();
+        $comment->complaint = $id;
         $comment->comment = $request->comment;
         $comment->user = Auth::user()->id;
         $comment->hook = $commentId;

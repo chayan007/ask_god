@@ -72,7 +72,7 @@
                                 <option>Others</option>
                             </select>
                             <p class="form-text text-muted">
-                                Your current gender is @if($user->gender != NULL) {{ $user->gender }} @else Others @endif. Gender is very important for horoscopic calculations.
+                                Your current gender is @if($user->gender != NULL) <b>{{ $user->gender }}</b> @else Others @endif. Gender is very important for horoscopic calculations.
                             </p>
                         </div>
                         <div class="form-group">
