@@ -44,4 +44,10 @@ class QuestionController extends Controller
         $question->save();
         return back();
     }
+
+    public function getQuestions()
+    {
+        $questions = Question::paginate(20);
+        return view('god.question', ['questions' => $questions]);
+    }
 }

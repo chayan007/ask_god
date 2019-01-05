@@ -15,5 +15,7 @@ Route::post('/addLord', 'LordController@addLord');
 Route::get('/addLord', 'LordController@showForm');
 Route::get('/lords', 'LordController@showLords');
 Route::get('/deleteLord/{id}', 'LordController@deleteLord');
+Route::get('/questions','QuestionController@getQuestions');
+Route::post('/addAnswer');
 
 
