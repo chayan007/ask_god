@@ -50,7 +50,8 @@
                         <ul role="menu" class="sub-menu">
                             <li><a href="/user/getInboxMessages">Check Inbox</a></li>
                             <li><a href="/user/getOutboxMessages">Check Outbox</a></li>
-                            <li><a href="/people/{{ Auth::user()->username }}">Share Link</a></li>
+                            <li><a href="/people/{{ Auth::user()->username }}">Confession Page</a></li>
+                            <li><a href="/user/share">Share Link</a></li>
                         </ul>
                     </li>
                     <li class="dropdown"><a href="#">Profile <i class="fa fa-angle-down"></i></a>
