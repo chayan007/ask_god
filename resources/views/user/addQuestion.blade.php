@@ -15,7 +15,7 @@
                             {{ csrf_field() }}
 
                             <div class="form-group" align="center">
-                                <textarea class="form-control" name="complaint" id="complaint" rows="3" style="outline: 2px solid deepskyblue; margin: 5px; padding: 10px" placeholder=" You need to describe the situation before you drop your question to God. Patience is the keyword to get answers.... "></textarea>
+                                <textarea class="form-control" name="question" id="question" rows="3" style="outline: 2px solid deepskyblue; margin: 5px; padding: 10px" placeholder=" You need to describe the situation before you drop your question to God. Patience is the keyword to get answers.... "></textarea>
                                 <p class="form-text text-muted" style="padding: 5px">
                                     Gods will answer your problem only when they will feel you need Answers. Don't ask "Who will be my wife ?". Shits like this can get you disbarred from this site.
                                 </p>

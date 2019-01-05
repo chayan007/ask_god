@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Lord;
 use App\Question;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -38,9 +39,9 @@ class QuestionController extends Controller
 
     public function addAnswer(Request $request, $id)
     {
-        $question = Question::where('id', $id);
+        $question = Question::where('id', $id)->first();
         $question->answer = $request->answer;
-        $question->lord = $request->lord_id;
+        $question->lord = $request->lord;
         $question->save();
         return back();
     }
@@ -48,6 +49,10 @@ class QuestionController extends Controller
     public function getQuestions()
     {
         $questions = Question::paginate(20);
-        return view('god.question', ['questions' => $questions]);
+        $lords = Lord::all();
+        return view('god.question', [
+            'questions' => $questions,
+            'lords' => $lords,
+        ]);
     }
 }

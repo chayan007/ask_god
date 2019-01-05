@@ -19,7 +19,7 @@ class CreateQuestionsTable extends Migration
             $table->foreign('user')->references('id')->on('users');
             $table->longText('question');
             $table->longText('answer')->nullable();
-            $table->unsignedInteger('lord');
+            $table->unsignedInteger('lord')->nullable();
             $table->foreign('lord')->references('id')->on('lords');
             $table->string('slug')->unique();
             $table->timestamps();

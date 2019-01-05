@@ -34,10 +34,10 @@
                     @foreach($questions as $question)
                         <tr>
                             <td> {{ $loop->iteration }}</td>
-                            <td>{{ DB::table('users')->where('id',$question->user)->name }}</td>
+                            <td>{{ DB::table('users')->where('id',$question->user)->first()->name }}</td>
                             <td>{{ $question->question }}</td>
                             <td>{{ $question->answer }}</td>
-                            <td>{{ DB::table('lords')->where('id',$question->lord)->name }}</td>
+                            <td>@if($question->lord == NULL) NULL @else {{ DB::table('lords')->where('id',$question->lord)->first()->name }}@endif</td>
                             <td>{{ $question->slug }}</td>
                             <td><!-- Button trigger modal -->
                                 <button type="button" class="btn btn-outline-warning btn-sm" data-toggle="modal"
@@ -62,6 +62,14 @@
                                                     <div class="form-group">
                                                         <label for="answer"></label>
                                                         <textarea class="form-control" name="answer" id="answer" rows="5"></textarea>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="lord">Lord</label>
+                                                        <select class="form-control" name="lord" id="lord">
+                                                            @foreach($lords as $lord)
+                                                            <option value="{{ $lord->id }}">{{ $lord->name }}</option>
+                                                            @endforeach
+                                                        </select>
                                                     </div>
                                                     <button type="submit" class="btn btn-success btn-block">
                                                         Submit

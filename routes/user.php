@@ -6,7 +6,7 @@ Route::get('/home', function () {
     $users[] = Auth::guard('user')->user();
     return view('user.home');
 })->name('home');
-
+Route::view('/', 'user.home');
 Route::view('/profile', 'user.profile');
 Route::get('/share', 'MessageController@getShareLink');
 Route::post('/sendMessage/{username}','MessageController@sendMessage');
