@@ -41,4 +41,10 @@ class LordController extends Controller
         $lord->delete();
         return back();
     }
+
+    public function getLords()
+    {
+        $lords = Lord::orderBy('created_at', 'desc')->paginate(20);
+        return view('user.gods', ['lords' => $lords]);
+    }
 }

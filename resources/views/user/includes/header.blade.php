@@ -63,9 +63,12 @@
                             <li><a href="/user/logout">Logout</a></li>
                         </ul>
                     </li>
+                    <li class=""><a href="/help">Help</a></li>
+                    <li class=""><a href="/gods">Supernaturals</a></li>
                     @endauth
                     @guest
                     <li class=""><a href="/gods">Supernaturals</a></li>
+                    <li class=""><a href="/help">Help</a></li>
                     <li><a href="/user/login">Sign In</a></li>
                     <li><a href="/user/register">Sing Up</a></li>
                     @endguest

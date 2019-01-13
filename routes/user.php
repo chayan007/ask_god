@@ -6,8 +6,8 @@ Route::get('/home', function () {
     $users[] = Auth::guard('user')->user();
     return view('user.home');
 })->name('home');
+Route::view('/help', 'user.help');
 Route::view('/', 'user.home');
-Route::get('/user/{username}', 'MessageController@getProfile');
 Route::view('/profile', 'user.profile');
 Route::get('/share', 'MessageController@getShareLink');
 Route::post('/sendMessage/{username}','MessageController@sendMessage');
@@ -26,3 +26,6 @@ Route::post('/addComment/{id}', 'CommentController@addComment');
 Route::get('/ask', 'QuestionController@showForm');
 Route::post('/addQuestion', 'QuestionController@addQuestion');
 Route::get('/answers', 'QuestionController@myQuestions');
+Route::get('/gods', 'LordController@getLords');
+Route::get('/{username}', 'MessageController@getProfile');
+
