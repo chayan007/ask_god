@@ -47,4 +47,11 @@ class LordController extends Controller
         $lords = Lord::orderBy('created_at', 'desc')->paginate(20);
         return view('user.gods', ['lords' => $lords]);
     }
+
+    public function getLord($slug)
+    {
+        $lord = Lord::where('slug', $slug)->firstOrFail();
+        return view('user.god', ['god' => $lord]);
+
+    }
 }

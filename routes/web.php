@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 Route::view('/help', 'user.help');
 Route::get('/gods', 'LordController@getLords');
+Route::get('/gods/{lord}', 'LordController@getLord');
 Route::get('/people/{username}', 'MessageController@getProfile');
 
 Route::group(['prefix' => 'user'], function () {
