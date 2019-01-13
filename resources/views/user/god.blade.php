@@ -4,7 +4,14 @@
 @endsection
 
 @section('content')
-    <div class="panel panel-primary" style="margin: 40px">
+    <div @if($god->category == 'God' || $god->category == 'Angel')
+                class="panel panel-primary"
+         @elseif($god->category == 'Demon' || $god->category == 'Devil')
+                class="panel panel-danger"
+         @else
+                class="panel panel-warning"
+         @endif
+         style="margin: 40px">
         <div class="panel-heading">
             <h3 class="panel-title" align="center">{{ $god->name }}</h3>
         </div>
