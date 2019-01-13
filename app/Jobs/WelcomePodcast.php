@@ -8,6 +8,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use App\Mail\WelcomeMailer;
+use Illuminate\Support\Facades\Mail;
 
 class WelcomePodcast implements ShouldQueue
 {
