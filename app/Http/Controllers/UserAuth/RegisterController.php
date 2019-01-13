@@ -7,6 +7,7 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Auth;
+use App\Jobs\WelcomePodcast;
 
 class RegisterController extends Controller
 {
@@ -64,6 +65,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        WelcomePodcast::dispatchNow($data['name'], $data['email']);
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
