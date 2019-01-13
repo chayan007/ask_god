@@ -5,10 +5,13 @@
             <div class="alert alert-warning" role="alert" align="center" style="margin: 10px">
                 <strong>No one has left you a message yet !</strong>
             </div>
-        @endif    
+        @endif
         @foreach($messages as $message)
+
+            @php $a =0; if($message->is_anonymous) $a = 1; else $a = 0; @endphp
+
             <div class="panel panel-primary" style="margin: 15px;">
-                <div class="panel-heading">{{ DB::table('users')->where('id', $message->from)->first()->name }}</div>
+                <div class="panel-heading">@if(!$a){{ DB::table('users')->where('id', $message->from)->first()->name }}@else Anonymous @endif</div>
                 <div class="panel-body">
                     <blockquote class="blockquote">
                         <p class="mb-0">{{ $message->message }}</p>

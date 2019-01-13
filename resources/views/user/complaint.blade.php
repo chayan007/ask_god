@@ -7,7 +7,7 @@
             </div>
         @endif
         <div class="panel panel-warning" style="margin: 10px;" align="center">
-            <div class="panel-heading"> <a href=""><b>{{ DB::table('users')->where('id', $complaint->user)->first()->name }}</b></a> has complained the following</div>
+            <div class="panel-heading"> <a href="/people/{{ DB::table('users')->where('id', $complaint->user)->first()->username }}"><b>{{ DB::table('users')->where('id', $complaint->user)->first()->name }}</b></a> has complained the following</div>
             <div class="panel-body">{{ $complaint->complaint }}</div>
             <div class="panel-footer">
                 @if($complaint->guidance == NULL)

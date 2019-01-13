@@ -32,7 +32,7 @@ class MessageController extends Controller
     public function getInboxMessages()
     {
         $user = Auth::user()->id;
-        $messages = Message::where('to', $user)->get();
+        $messages = Message::where('to', $user)->orderBy('created_at', 'desc')->get();
         $replies = Reply::where('from', $user);
         return view('user.inbox', ['messages' => $messages, 'replies' => $replies]);
     }

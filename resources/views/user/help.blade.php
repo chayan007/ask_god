@@ -39,12 +39,11 @@
                 <li>You need to share your message link so that people can message you.</li>
                 <li>Your share link is available in <span style="font-family:'Archivo Narrow'; font-size: 16px; text-shadow: 0 0 3px gray;">Messages > Share Link</span></li>
                 <li>You can send messages/replies in anonymous way to hide your identity (Everything allowed).</li>
-                <li>Messages are private conversation between users.</li>
+                <li>Messages are private conversation only between users.</li>
                 <li>Mighty ones are not part of this messaging system.</li>
                 <li>If you have recieved messages, it will appear in <span style="font-family:'Archivo Narrow'; font-size: 16px; text-shadow: 0 0 3px gray;">Messages > Check Inbox</span></li>
                 <li>If you have sent messages, it will appear in <span style="font-family:'Archivo Narrow'; font-size: 16px; text-shadow: 0 0 3px gray;">Messages > Check Outbox</span></li>
                 <li>Replies will appear below the message(whether Inbox or Outbox). Always keep checking.</li>
-                <li>Do have a spicy and safe conversation between fellow users.</li>
                 <li>You can send us complaints/feedback by filling the <a href="#form_footer">feedback form in the footer (Click Here) </a> .</li>
             </ul>
         </div>

@@ -16,13 +16,10 @@
                         @if(count($commentos)>0)
                             @foreach($commentos as $comment)
                                 <div class="list-group">
-                                    <a href="#" class="list-group-item" style="margin: 10px; margin-left: 10px">
+                                    <a href="/people/{{ DB::table('users')->where('id', $comment->user)->first()->name }}" class="list-group-item" style="margin: 10px; margin-left: 10px">
                                         <h4 class="list-group-item-heading"><b style="font-family: 'Bookman Old Style'">{{ DB::table('users')->where('id', $comment->user)->first()->name }}</b> has commented:</h4>
                                         <p class="list-group-item-text">{{ $comment->comment }}</p>
                                         <!-- Button trigger modal -->
-                                        <button type="button" class="btn btn-outline-warning btn-sm" data-toggle="modal" data-target="#modelId{{ $comment->id }}">
-                                            Add a Reply
-                                        </button>
 
                                         <!-- Modal -->
                                         <div class="modal fade" id="modelId{{ $comment->id }}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"

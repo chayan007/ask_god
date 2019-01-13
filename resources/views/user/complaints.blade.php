@@ -5,7 +5,7 @@
             @foreach($complaints as $complaint)
             <div class="col-sm-6 col-md-4 col-lg-3" style="margin: 10px;">
                 <div class="thumbnail">
-                        <img src="@if(Auth::user()->face == NULL){{ asset('images/robot.png') }}@else{{ Storage::url(Auth::user()->face) }}@endif" width="100px" height="100px" class="img-circle">
+                        <img src="@if(DB::table('users')->where('id', $complaint->user)->first()->face == NULL){{ asset('images/robot.png') }}@else{{ Storage::url(DB::table('users')->where('id', $complaint->user)->first()->face) }}@endif" width="100px" height="100px" class="img-circle">
                     <div class="caption">
                         <blockquote class="blockquote">
                             <p class="mb-0">{{ substr($complaint->complaint,0,50) }} . . .</p>
