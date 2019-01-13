@@ -13,7 +13,7 @@
                             <footer class="blockquote-footer"> <cite title="Source Title">{{ $lord->name }}</cite></footer>
                         </blockquote>
                         <p>
-                            <a href="/user/god/{{ $lord->slug }}" class="btn btn-common" role="button">See More</a>
+                            <a href="/god/{{ $lord->slug }}" class="btn btn-common" role="button">See More</a>
                         </p>
                     </div>
                 </div>
