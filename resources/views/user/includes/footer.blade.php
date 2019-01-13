@@ -22,19 +22,19 @@
                         </div>
                         <div class="media-body">
                             <blockquote>This site is just wonderful. I die to talk with Devil more and more. Please make Devil active.</blockquote>
-                            <h3><a href="">- Abraham Josef</a></h3>
+                            <h3><a href="">- Idris Meer</a></h3>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="contact-info bottom">
-                    <h2>Contacts</h2>
-                    <address>
-                        E-mail: <a href="mailto:someone@example.com">email@email.com</a> <br>
-                        Phone: +1 (123) 456 7890 <br>
-                        Fax: +1 (123) 456 7891 <br>
-                    </address>
+                    {{--<h2>Contacts</h2>--}}
+                    {{--<address>--}}
+                        {{--E-mail: <a href="mailto:someone@example.com">email@email.com</a> <br>--}}
+                        {{--Phone: +1 (123) 456 7890 <br>--}}
+                        {{--Fax: +1 (123) 456 7891 <br>--}}
+                    {{--</address>--}}
 
                     <h2>Address</h2>
                     <address>
@@ -48,7 +48,8 @@
             <div class="col-md-4 col-sm-12">
                 <div class="contact-form bottom" id="form_footer">
                     <h2>Drop a Feedback</h2>
-                    <form id="main-contact-form" name="contact-form" method="post" action="/sendFeedback">
+                    <form action="/sendFeedback" id="main-contact-form" method="post">
+                        @csrf
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" required="required" placeholder="Name">
                         </div>
@@ -59,7 +60,7 @@
                             <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Your text here"></textarea>
                         </div>
                         <div class="form-group">
-                            <input type="submit" name="submit" class="btn btn-submit" value="Submit">
+                            <input type="submit" class="btn btn-submit" value="Submit">
                         </div>
                     </form>
                 </div>
