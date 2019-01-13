@@ -7,6 +7,7 @@ Route::get('/home', function () {
     return view('user.home');
 })->name('home');
 Route::view('/', 'user.home');
+Route::get('/user/{username}', 'MessageController@getProfile');
 Route::view('/profile', 'user.profile');
 Route::get('/share', 'MessageController@getShareLink');
 Route::post('/sendMessage/{username}','MessageController@sendMessage');

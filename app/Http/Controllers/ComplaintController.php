@@ -35,6 +35,14 @@ class ComplaintController extends Controller
         ]);
     }
 
+    public function addGuidance(Request $request, $id)
+    {
+        $complaint = Complaint::where('id', $id)->first();
+        $complaint->guidance = $request->guidance;
+        $complaint->save();
+        return back();
+    }
+
     public function complaints()
     {
         $complaints = Complaint::all()->orderBy('created_at')->simplePaginate(10);

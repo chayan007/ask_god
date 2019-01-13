@@ -31,6 +31,7 @@
                     @endif
             </ul>
         </div>
-        {{ $messages->links() }}
     @endforeach
+
+    {{ $messages->links() }}
 @endsection

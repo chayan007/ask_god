@@ -31,7 +31,7 @@ class LordController extends Controller
 
     public function showLords()
     {
-        $lords = Lord::all();
+        $lords = Lord::orderBy('created_at', 'desc')->paginate(20);
         return view('god.lords', ['lords' => $lords]);
     }
 

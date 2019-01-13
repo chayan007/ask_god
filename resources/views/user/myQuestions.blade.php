@@ -13,7 +13,9 @@
                     <div class="panel-footer">
                         <blockquote class="blockquote">
                             <p class="mb-0">{{ $question->answer }}</p>
-                            <footer class="blockquote-footer"> <cite title="Source Title">{{ \Illuminate\Support\Facades\DB::table('lords')->where('id', $question->lord)->first()->name }}</cite></footer>
+                            <footer class="blockquote-footer"> <cite title="Source Title" style="font-weight: bolder; font-size: large">{{ \Illuminate\Support\Facades\DB::table('lords')->where('id', $question->lord)->first()->name }}</cite>
+                                <br><span class="badge badge-pill badge-primary" style="margin: 10px;">{{ \Illuminate\Support\Facades\DB::table('lords')->where('id', $question->lord)->first()->category }}</span>
+                            </footer>
                         </blockquote>
                     </div>
                 </div>

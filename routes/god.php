@@ -19,5 +19,6 @@ Route::get('/questions','QuestionController@getQuestions');
 Route::post('/addAnswer/{id}', 'QuestionController@addAnswer');
 Route::get('/messages', 'MessageController@getAllMessages');
 Route::get('/complaints', 'ComplaintController@getAllComplaints');
+Route::post('/addGuidance/{id}', 'ComplaintController@addGuidance');
 
 

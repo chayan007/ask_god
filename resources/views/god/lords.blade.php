@@ -125,6 +125,7 @@
                     @endforeach
                     </tbody>
                 </table>
+                {{ $lords->links() }}
             </div>
         </div>
     </div>

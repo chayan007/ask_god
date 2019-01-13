@@ -26,8 +26,24 @@
                         </li>
                     @endforeach
                 @endif
+                @if($complaint->guidance != NULL)
+                    <li class="list-group-item" style="padding-left: 40px; outline: 1px solid #ac2429;">
+                        <blockquote class="blockquote">
+                            <p class="mb-0">{{ $complaint->guidance }}</p>
+                            <footer class="blockquote-footer"> <cite title="Source Title">God</cite></footer>
+                        </blockquote>
+                    </li>
+                @endif
+                <form action="/god/addGuidance/{{ $complaint->id }}" method="POST">
+                    @csrf
+                    <div class="form-group">
+                        <label for="guidance">Guidance</label>
+                        <textarea class="form-control" name="guidance" id="guidance" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-danger btn-block">Submit</button>
+                </form>
             </ul>
         </div>
-        {{ $complaints->links() }}
     @endforeach
+    {{ $complaints->links() }}
 @endsection

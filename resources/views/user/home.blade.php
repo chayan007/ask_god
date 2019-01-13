@@ -9,8 +9,14 @@
                     <div class="slide-text">
                         <h1>Talk to God</h1>
                         <p>Communicate with the God or the Devil on daily basis. They are here to answer your prayers. Enter Valhalla and enjoy the new journey.</p>
-                        <a href="/user/register" class="btn btn-common">SIGN UP</a>
-                        <a href="/user/login" class="btn btn-common">SIGN IN</a>
+                        @guest
+                            <a href="/user/register" class="btn btn-common">SIGN UP</a>
+                            <a href="/user/login" class="btn btn-common">SIGN IN</a>
+                        @endguest
+                        @auth
+                        <a href="/user/ask" class="btn btn-common">MESSAGE</a>
+                        <a href="/user/complaints" class="btn btn-common">COMPLAINT</a>
+                        @endauth
 
                     </div>
                     <img src="{{ asset('images/home/slider/hill.png') }}" class="slider-hill" alt="slider image">
