@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('user.home');
 });
+Route::view('/mail', 'emails.welcome');
 Route::get('/redirect', 'SocialAuthGoogleController@redirect');
 Route::get('/callback', 'SocialAuthGoogleController@callback');
 Route::view('/help', 'user.help');
