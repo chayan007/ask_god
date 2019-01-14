@@ -32,7 +32,7 @@
                             <li class="list-group-item" style="padding-left: 40px;">
                                 <blockquote class="blockquote">
                                     <p class="mb-0">{{ $reply->reply }}</p>
-                                    <footer class="blockquote-footer"> <cite title="Source Title">{{ Auth::user()->name }}</cite></footer>
+                                    <footer class="blockquote-footer"> <cite title="Source Title">{{ \Illuminate\Support\Facades\DB::table('users')->where('id', $reply->from)->first()->name }}</cite></footer>
                                 </blockquote>
                             </li>
                         @endforeach
