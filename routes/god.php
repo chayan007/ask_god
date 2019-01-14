@@ -9,7 +9,7 @@ Route::get('/home', function () {
 
     return view('god.home');
 })->name('home');
-
+Route::get('/users', 'GodController@showUsers');
 Route::get('/dashboard', 'GodController@dashboard');
 Route::post('/addLord', 'LordController@addLord');
 Route::get('/addLord', 'LordController@showForm');

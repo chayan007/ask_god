@@ -14,6 +14,9 @@
                 <li class="active">
                     <a href="#"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                 </li>
+                <li class="active">
+                    <a href="/god/users"> <i class="menu-icon fa fa-sign-in"></i>Users </a>
+                </li>
                 <h3 class="menu-title">Lord </h3><!-- /.menu-title -->
                 <li class="menu-item-has-children dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Lords</a>

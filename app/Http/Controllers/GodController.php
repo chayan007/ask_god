@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Lord;
+use App\User;
 use Illuminate\Http\Request;
 
 class GodController extends Controller
@@ -17,4 +18,11 @@ class GodController extends Controller
         $gods = Lord::paginate(15);
         return view('user.gods', ['gods' => $gods]);
     }
+
+    public function showUsers()
+    {
+        $users = User::paginate(15);
+        return view('god.users', ['users' => $users]);
+    }
+
 }
