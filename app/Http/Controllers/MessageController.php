@@ -33,14 +33,14 @@ class MessageController extends Controller
     {
         $user = Auth::user()->id;
         $messages = Message::where('to', $user)->orderBy('created_at', 'desc')->get();
-        $replies = Reply::where('from', $user);
+        $replies = Reply::where('from', $user)->get();
         return view('user.inbox', ['messages' => $messages, 'replies' => $replies]);
     }
 
     public function getOutboxMessages()
     {
         $messages = Message::where('from', Auth::user()->id)->get();
-        $replies = Reply::where('to', Auth::user()->id);
+        $replies = Reply::where('to', Auth::user()->id)->get();
         return view('user.outbox', ['messages' => $messages, 'replies' => $replies]);
     }
 
