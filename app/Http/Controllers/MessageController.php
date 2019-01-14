@@ -14,7 +14,7 @@ class MessageController extends Controller
     public function getShareLink()
     {
         $user = Auth::user()->username;
-        $link = 'ask_god.test/people/'.$user;
+        $link = 'http://www.theaskgod.com/people/'.$user;
         return view('user.share', ['link' => $link]);
     }
 

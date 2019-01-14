@@ -12,7 +12,7 @@
             <a href="/godSort/DemiGod">DemiGods</a>
             <a href="/godSort/Supernatural">Supernaturals</a>
             <a href="/godSort/Demon">Demons</a>
-            <a href="/godSort/Devil">Devils</a>
+            <a href="/godSort/Devil">Devil</a>
         </div>
         </div>
         <style>
