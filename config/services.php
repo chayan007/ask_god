@@ -41,8 +41,8 @@ return [
     ],
 
     'facebook' => [
-        'client_id' => 'xxxxxxx',
-        'client_secret' => 'xxxxxxxx',
+        'client_id' => '2239130949666829',
+        'client_secret' => '6f80f37835547fd0361c1d148cc2a469',
         'redirect' => 'http://www.theaskgod.com/callback',
     ],
 
