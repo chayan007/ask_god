@@ -35,6 +35,7 @@ class SocialAuthGoogleController extends Controller
                 $user->email = $googleUser->email;
                 $user->google_id = $googleUser->id;
                 $user->password = md5(rand(1,10000));
+                $user->username = md5(rand(1,1000000000));
                 $user->save();
                 Auth::loginUsingId($user->id);
             }
