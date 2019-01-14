@@ -25,7 +25,7 @@
                     </blockquote>
                 </div>
                 <ul class="list-group">
-                    @if(count($replies) > 0)
+                    @if($replies == NULL)
                         @php $replys = $replies->where('message', $message->id)->get() @endphp
                         @if(count($replys) > 0)
                             @foreach($replys as $reply)
