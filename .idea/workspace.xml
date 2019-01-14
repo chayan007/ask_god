@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a743000d-d842-4f13-84e4-4f93fff9e8a4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/UserAuth/LoginController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserAuth/LoginController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/SocialAuthGoogleController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/SocialAuthGoogleController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -552,12 +551,12 @@
       <workItem from="1547321822743" duration="592000" />
       <workItem from="1547356676375" duration="21947000" />
       <workItem from="1547402344892" duration="4535000" />
-      <workItem from="1547456292469" duration="5247000" />
+      <workItem from="1547456292469" duration="5334000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117796000" />
+    <option name="totallyTimeSpent" value="117883000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />

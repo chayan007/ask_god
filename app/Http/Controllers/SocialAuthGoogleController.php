@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-g
+
 use App\User;
 use Laravel\Socialite\Facades\Socialite;
 use Illuminate\Support\Facades\Auth;
