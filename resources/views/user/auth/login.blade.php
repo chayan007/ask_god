@@ -59,6 +59,7 @@
                                 </a>
                             </div>
                         </div>
+                        <h1 class="display-3" align="center" style="margin: 10px; font-size: 20px;">OR</h1>
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
                                 <a href="{{url('/redirect')}}" class="loginBtn loginBtn--facebook">Login with Facebook</a>
