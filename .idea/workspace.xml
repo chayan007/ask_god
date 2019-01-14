@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a743000d-d842-4f13-84e4-4f93fff9e8a4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/god/users.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/GodController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/GodController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/god/includes/panel.blade.php" afterPath="$PROJECT_DIR$/resources/views/god/includes/panel.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/god.php" afterPath="$PROJECT_DIR$/routes/god.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/services.php" afterPath="$PROJECT_DIR$/config/services.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/god/lords.blade.php" afterPath="$PROJECT_DIR$/resources/views/god/lords.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,16 +16,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/user/home.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="82" column="26" lean-forward="true" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MessageController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MessageController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -88,7 +76,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="god.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="god.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/god.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="253">
@@ -111,8 +99,18 @@
       <file leaf-file-name="lords.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/god/lords.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="10" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="131" selection-end-column="11" />
+            <state relative-caret-position="484">
+              <caret line="129" column="29" lean-forward="false" selection-start-line="129" selection-start-column="29" selection-end-line="129" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/services.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="40" column="6" lean-forward="false" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -151,7 +149,6 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/ComplaintController.php" />
         <option value="$PROJECT_DIR$/resources/views/god/complaint.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/user/myQuestions.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/god/lords.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/user/share.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/user/layout/god.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/user/god.blade.php" />
@@ -172,7 +169,6 @@
         <option value="$PROJECT_DIR$/app/SocialFacebookAccount.php" />
         <option value="$PROJECT_DIR$/app/Services/SocialFacebookAccountService.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FacebookController.php" />
-        <option value="$PROJECT_DIR$/config/services.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserAuth/LoginController.php" />
@@ -194,6 +190,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/GodController.php" />
         <option value="$PROJECT_DIR$/resources/views/god/includes/panel.blade.php" />
         <option value="$PROJECT_DIR$/routes/god.php" />
+        <option value="$PROJECT_DIR$/resources/views/god/lords.blade.php" />
+        <option value="$PROJECT_DIR$/config/services.php" />
       </list>
     </option>
   </component>
@@ -635,12 +633,12 @@
       <workItem from="1547321822743" duration="592000" />
       <workItem from="1547356676375" duration="21947000" />
       <workItem from="1547402344892" duration="4535000" />
-      <workItem from="1547456292469" duration="11352000" />
+      <workItem from="1547456292469" duration="12440000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="123901000" />
+    <option name="totallyTimeSpent" value="124989000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -913,14 +911,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="52" column="6" lean-forward="false" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -1055,14 +1045,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/god/lords.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="10" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="131" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/god/users.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
@@ -1099,6 +1081,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/god/lords.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="129" column="29" lean-forward="false" selection-start-line="129" selection-start-column="29" selection-end-line="129" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="40" column="6" lean-forward="false" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
           <folding />
         </state>
       </provider>
