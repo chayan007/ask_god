@@ -29,6 +29,6 @@ class WelcomeMailer extends Mailable
      */
     public function build()
     {
-        return $this->from('noreply@theaskgod.com')->view('emails.welcome');
+        return $this->from('noreply@theaskgod.com', 'Ask God Creator')->view('emails.welcome');
     }
 }
