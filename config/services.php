@@ -40,4 +40,10 @@ return [
         ],
     ],
 
+    'facebook' => [
+        'client_id' => 'xxxxxxx',
+        'client_secret' => 'xxxxxxxx',
+        'redirect' => 'http://www.theaskgod.com/callback',
+    ],
+
 ];
