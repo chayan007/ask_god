@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Lord;
 use App\Reply;
 use Illuminate\Http\Request;
 use App\User;
 use App\Message;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Jobs\AnswerPodcast;
 
 class MessageController extends Controller
 {

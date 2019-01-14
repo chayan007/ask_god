@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Lord;
 use App\Question;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Jobs\AnswerPodcast;
 
 class QuestionController extends Controller
 {
@@ -43,6 +45,10 @@ class QuestionController extends Controller
         $question->answer = $request->answer;
         $question->lord = $request->lord;
         $question->save();
+        $lord = Lord::where('id', $request->lord)->first()->name;
+        $user = User::where('id', $question->user)->first()->name;
+        $email = User::where('id', $question->user)->first()->email;
+        AnswerPodcast::dispatchNow($user, $lord, $email);
         return back();
     }
 
